@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA System</title>
+    <link rel="stylesheet" href="phone.css">
+</head>
+<body>
+    <h2>Two-Factor Authentication</h2>
+    <form id="2fa-form">
+        <label for="phoneNumber">Enter your phone number:</label><br>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="+977 98XXXXXXXX" required><br><br>
+
+        <button type="button" onclick="sendVerificationCode()">Send Verification Code</button><br><br>
+
+        <div id="verification-section" style="display: none;">
+            <label for="verificationCode">Enter the code you received:</label><br>
+            <input type="text" id="verificationCode" name="verificationCode" required><br><br>
+
+            <button type="button" onclick="verifyCode()">Verify Code</button>
+        </div>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="2fa.js"></script>
+</body>
+</html>
